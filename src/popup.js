@@ -28,7 +28,6 @@
   function execute(callback) {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       chrome.tabs.executeScript(tabs[0].id, { code: `__bl_execute('${callback}')`, runAt: "document_end" }, function (response) { });
-      //chrome.tabs.sendMessage(tabs[0].id, { type: "callback", callback: callback }, function (response) { });
     });
   }
 

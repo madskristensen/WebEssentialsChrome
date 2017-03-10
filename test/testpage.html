@@ -17,11 +17,10 @@
         browserLink.extensions["madskristensen.editorextensions.designmodefactory"] = {
             name: "madskristensen.editorextensions.designmodefactory",
             menu: {
-                "Enable design mode": "setDesignMode()",
-                "Enable inspect mode": "setInspectMode()",
+                "Enable design mode": 'setMode("Design mode")',
+                "Enable inspect mode": 'setMode("Inspect mode")',
             },
-            setDesignMode: function () { alert("Design mode enabled"); },
-            setInspectMode: function () { alert("Inspect mode enabled"); }
+            setMode: function (type) { alert(`${type} enabled`); }
         };
     </script>
 

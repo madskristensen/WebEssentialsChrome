@@ -1,0 +1,23 @@
+﻿body {
+    width: 300px;
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    ul li {
+        line-height: 1.5;
+    }
+
+    ul a {
+        text-decoration: none;
+        color: black;
+    }
+
+        ul a:hover {
+            text-decoration: underline;
+        }
