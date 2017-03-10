@@ -1,0 +1,29 @@
+<!-- Load this page in the browser to test the extension-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test page</title>
+</head>
+<body>
+
+    <h2>Test page</h2>
+
+    <script id="__browserLink_initializationData">
+        var browserLink = {
+            extensions: []
+        };
+
+        browserLink.extensions["ext1"] = { name: "ext1" };
+        browserLink.extensions["madskristensen.editorextensions.designmodefactory"] = {
+            name: "madskristensen.editorextensions.designmodefactory",
+            menu: {
+                "Enable design mode": "setDesignMode()",
+                "Enable inspect mode": "setInspectMode()",
+            },
+            setDesignMode: function () { alert("Design mode enabled"); },
+            setInspectMode: function () { alert("Inspect mode enabled"); }
+        };
+    </script>
+
+</body>
+</html>
