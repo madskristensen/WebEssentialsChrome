@@ -1,4 +1,3 @@
-<!-- Load this page in the browser to test the extension-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,15 +11,18 @@
         var browserLink = {
             extensions: []
         };
+        // default extension. Has to be there
+        browserLink.extensions["browserreloadonsave.reloadfactory"] = { name: "browserreloadonsave.reloadfactory" };
 
-        browserLink.extensions["ext1"] = { name: "ext1" };
-        browserLink.extensions["madskristensen.editorextensions.designmodefactory"] = {
-            name: "madskristensen.editorextensions.designmodefactory",
+        // Our custom mock extension
+        browserLink.extensions["myextension.designmodefactory"] = {
+            name: "myextension.designmodefactory",
             menu: {
-                "Enable design mode": 'setMode("Design mode")',
-                "Enable inspect mode": 'setMode("Inspect mode")',
+                "Enable design mode": 'setDesignMode',
+                "Enable inspect mode": 'setInspectMode',
             },
-            setMode: function (type) { alert(`${type} enabled`); }
+            setDesignMode: function () { alert(`Design mode enabled`); },
+            setInspectMode: function () { alert(`Inspect mode enabled`); }
         };
     </script>
 

@@ -17,7 +17,7 @@
         a.innerHTML = item;
         a.href = "#";
         a["data-callback"] = items[item];
-        a.onclick = function () { execute(`eval(browserLink.extensions["${extensions[i].name}"].${this["data-callback"]})`); };
+        a.onclick = function () { execute(extensions[i].name, this["data-callback"]); };
 
         li.appendChild(a);
         list.appendChild(li);
@@ -25,9 +25,10 @@
     }
   }
 
-  function execute(callback) {
+  function execute(extName, method) {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      chrome.tabs.executeScript(tabs[0].id, { code: `__bl_execute('${callback}')`, runAt: "document_end" }, function (response) { });
+      chrome.tabs.executeScript(tabs[0].id, { code: `__bl_execute('${extName}', '${method}')`, runAt: "document_end" }, function (response) { });
+      window.close();
     });
   }
 

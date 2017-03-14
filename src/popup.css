@@ -1,6 +1,14 @@
 ﻿body {
-    width: 300px;
+    min-width: 150px;
     font-size: 14px;
+    padding: 0 10px;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom: 1px solid #8760c7;
+    margin: 0 0 15px 0;
 }
 
 ul {
@@ -10,8 +18,16 @@ ul {
 }
 
     ul li {
-        line-height: 1.5;
+        line-height: 1.6;
+        display: block;
+        white-space: nowrap;
     }
+
+        ul li:before {
+            content: "∷ ";
+            position: relative;
+            top: -1px;
+        }
 
     ul a {
         text-decoration: none;
@@ -20,4 +36,5 @@ ul {
 
         ul a:hover {
             text-decoration: underline;
+            color: #8760c7;
         }

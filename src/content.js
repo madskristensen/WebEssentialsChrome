@@ -5,6 +5,7 @@ function injectScript(file_path, tag) {
   node.appendChild(script);
 }
 
+// Check if the Browser Link script tag exist on the page
 if (document.getElementById("__browserLink_initializationData")) {
   injectScript(chrome.extension.getURL('page.js'), 'body');
 
@@ -16,7 +17,7 @@ if (document.getElementById("__browserLink_initializationData")) {
   });
 }
 
-function __bl_execute(callback) {
+function __bl_execute(extName, method) {
   // Send a postMessage that page.js can intercept
-  window.postMessage({ type: "__bl_execute", callback: callback }, "*");
+  window.postMessage({ type: "__bl_execute", extName: extName, method: method }, "*");
 }
