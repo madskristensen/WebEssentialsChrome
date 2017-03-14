@@ -1,14 +1,21 @@
 ﻿body {
     min-width: 150px;
-    font-size: 14px;
+    font: 16px calibri;
     padding: 0 10px;
+    white-space: nowrap;
 }
 
 h1 {
-    font-size: 18px;
+    font-size: 1.5em;
     font-weight: normal;
     border-bottom: 1px solid #8760c7;
     margin: 0 0 15px 0;
+}
+
+h2 {
+    font-size: 1.1em;
+    padding: 0;
+    margin: 7px 0 0 0;
 }
 
 ul {
@@ -20,13 +27,11 @@ ul {
     ul li {
         line-height: 1.6;
         display: block;
-        white-space: nowrap;
     }
 
         ul li:before {
-            content: "∷ ";
-            position: relative;
-            top: -1px;
+            content: " ⏵ ";
+            color: green;
         }
 
     ul a {
@@ -38,3 +43,14 @@ ul {
             text-decoration: underline;
             color: #8760c7;
         }
+
+footer,
+footer a {
+    font-size: .9em;
+    color: darkgray;
+}
+
+    footer a:hover {
+        text-decoration: underline;
+        color: #8760c7;
+    }

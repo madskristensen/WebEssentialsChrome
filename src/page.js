@@ -1,9 +1,8 @@
 (function () {
   var interval = setInterval(function () {
 
-    if (!browserLink | !browserLink.extensions["browserreloadonsave.reloadfactory"]) {
+    if (!browserLink | !browserLink.extensions["browserreloadonsave.reloadfactory"])
       return;
-    }
 
     var extensions = [];
 
@@ -17,12 +16,13 @@
   }, 25);
 
   window.addEventListener("message", function (event) {
-    if (event.data.type === "__bl_execute") {
-      try {
-        browserLink.extensions[event.data.extName][event.data.method]();
-      } catch (e) {
-        console.log(`"${event.data.method}" is not exposed on the "${event.data.extName}" Browser Link extension.`);
-      }
+    if (event.data.type !== "__bl_execute")
+      return;
+
+    try {
+      browserLink.extensions[event.data.extName][event.data.method]();
+    } catch (e) {
+      console.log(`"${event.data.method}" is not exposed on the "${event.data.extName}" Browser Link extension.`);
     }
   });
 })();

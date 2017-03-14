@@ -1,13 +1,8 @@
-function injectScript(file_path, tag) {
-  var node = document.getElementsByTagName(tag)[0];
-  var script = document.createElement('script');
-  script.setAttribute('src', file_path);
-  node.appendChild(script);
-}
-
 // Check if the Browser Link script tag exist on the page
 if (document.getElementById("__browserLink_initializationData")) {
-  injectScript(chrome.extension.getURL('page.js'), 'body');
+  var script = document.createElement('script');
+  script.setAttribute('src', chrome.extension.getURL('page.js'));
+  document.body.appendChild(script);
 
   window.addEventListener("message", function (event) {
     if (event.data.type === "__bl_extensionlist") {
