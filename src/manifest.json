@@ -4,7 +4,7 @@
   "name": "Web Essentials",
   "description": "Interacts with Visual Studio's Browser Link feature",
   "author": "Mads Kristensen",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "icons": {
     "16": "img/icon16.png",
