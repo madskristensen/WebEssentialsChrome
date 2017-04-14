@@ -13,9 +13,13 @@ h1 {
 }
 
 h2 {
-    font-size: 1.1em;
+    font-size: 1em;
     padding: 0;
     margin: 7px 0 0 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {
@@ -35,7 +39,6 @@ ul {
         }
 
     ul a {
-        text-decoration: none;
         color: black;
     }
 
@@ -44,13 +47,16 @@ ul {
             color: #8760c7;
         }
 
-footer,
-footer a {
-    font-size: .9em;
+footer {
+    font-size: .85em;
     color: darkgray;
 }
 
-    footer a:hover {
-        text-decoration: underline;
-        color: #8760c7;
+    footer a {
+        color: darkgray;
     }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #8760c7;
+        }

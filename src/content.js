@@ -1,4 +1,5 @@
 // Check if the Browser Link script tag exist on the page
+
 if (document.getElementById("__browserLink_initializationData")) {
   var script = document.createElement('script');
   script.setAttribute('src', chrome.extension.getURL('page.js'));

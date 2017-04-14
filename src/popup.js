@@ -7,10 +7,7 @@ function showList(extensions) {
 
     let items = extensions[i].menu;
 
-    let header = document.createElement("h2");
-    header.innerHTML = items.displayText || extensions[i].name;
-    header.className = "header";
-    list.appendChild(header);
+    let header = getHeader(items, list);
 
     let ul = document.createElement("ul");
     list.appendChild(ul);
@@ -30,6 +27,20 @@ function showList(extensions) {
       ul.appendChild(li);
     }
   }
+}
+
+function getHeader(items, list) {
+
+  var header = list.querySelector("h2[data-name='" + items.displayText + "']");
+  if (!header) {
+    header = document.createElement("h2");
+    header.innerHTML = items.displayText;
+    header.className = "header";
+    header.setAttribute("data-name", items.displayText);
+    list.appendChild(header);
+  }
+
+  return header;
 }
 
 function execute(extName, method) {

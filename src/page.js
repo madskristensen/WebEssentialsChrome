@@ -1,7 +1,7 @@
 (function () {
   var interval = setInterval(function () {
 
-    if (!browserLink | !browserLink.extensions["browserreloadonsave.reloadfactory"])
+    if (!browserLink | (!browserLink.extensions["browserreloadonsave.reloadfactory"] & !browserLink.extensions["microsoft.visualstudio.web.pageinspector.package.refreshextensionfactory"]))
       return;
 
     var extensions = [];
