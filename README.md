@@ -2,6 +2,8 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/37jsbyfsv5edx481?svg=true)](https://ci.appveyor.com/project/madskristensen/webessentialschrome)
 
+Download and install from the [Google Chrome Web Store](https://chrome.google.com/webstore/detail/web-essentials/mghdcdlpcdiodelbplncnodiiadljhhk).
+
 Exposes Browser Link functionality directly from the Google Chrome toolbar.
 
 ![screenshot](art/screenshot.png)
