@@ -1,2 +1,2 @@
 
-Compress-Archive -Path src\* -compressionLevel Optimal -DestinationPath extension.zip
+Compress-Archive -Path src\app\* -compressionLevel Optimal -DestinationPath "Web Essentials.zip"
