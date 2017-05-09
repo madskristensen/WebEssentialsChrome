@@ -12,6 +12,7 @@ Exposes Browser Link functionality directly from the Google Chrome toolbar.
 
 - [Browser Link Inspector 2017](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.BrowserLinkInspector2017)
 - [Browser Sync](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.BrowserSync)
+- [W3C Validator](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.W3CValidator)
 - [Web Accessibility Checker](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebAccessibilityChecker)
 
 ## Developer notes
