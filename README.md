@@ -14,7 +14,7 @@ Exposes Browser Link functionality directly from the Google Chrome toolbar or Fi
 
 ### Firefox
 
-![screenshot firefox](art/screenshot-firefox.png)
+![Screenshot Firefox](art/screenshot-firefox.png)
 
 ## Supported Visual Studio extension
 
