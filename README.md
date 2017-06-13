@@ -1,12 +1,20 @@
-# Web Essentials Chrome extension
+# Web Essentials browser extension
 
 [![Build status](https://ci.appveyor.com/api/projects/status/37jsbyfsv5edx481?svg=true)](https://ci.appveyor.com/project/madskristensen/webessentialschrome)
 
-Download and install from the [Google Chrome Web Store](https://chrome.google.com/webstore/detail/web-essentials/mghdcdlpcdiodelbplncnodiiadljhhk).
+## Download and install 
+- [Google Chrome](https://chrome.google.com/webstore/detail/web-essentials/mghdcdlpcdiodelbplncnodiiadljhhk)
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/webessentials/)
 
-Exposes Browser Link functionality directly from the Google Chrome toolbar.
+Exposes Browser Link functionality directly from the Google Chrome toolbar or Firefox address bar.
+
+### Chrome
 
 ![screenshot](art/screenshot.png)
+
+### Firefox
+
+![screenshot firefox](art/screenshot-firefox.png)
 
 ## Supported Visual Studio extension
 
