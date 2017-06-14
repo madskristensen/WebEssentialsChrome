@@ -1,5 +1,15 @@
+
+function GetBrowser() {
+    try {
+        if (browser.runtime)
+            return browser;
+    } catch (e) {
+        return chrome;
+    }
+}
+
 let list = document.getElementById("list");
-let bgp = chrome.extension.getBackgroundPage();
+let bgp = GetBrowser().extension.getBackgroundPage();
 
 function showList(extensions) {
 
@@ -44,12 +54,12 @@ function getHeader(items, list) {
 }
 
 function execute(extName, method) {
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        chrome.tabs.executeScript(tabs[0].id, { code: `__bl_execute('${extName}', '${method}')`, runAt: "document_end" }, function (response) { });
+    GetBrowser().tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        GetBrowser().tabs.executeScript(tabs[0].id, { code: `__bl_execute('${extName}', '${method}')`, runAt: "document_end" }, function (response) { });
         window.close();
     });
 }
 
-chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+GetBrowser().tabs.query({ currentWindow: true, active: true }, function (tabs) {
     showList(bgp.data[tabs[0].id]);
 });

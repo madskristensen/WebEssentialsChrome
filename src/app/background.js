@@ -1,11 +1,22 @@
 var data = {};
 
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+function sendMessage(extObject, request) {
     if (request.type === "extensionlist" && request.data.length > 0) {
 
-        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        extObject.tabs.query({ active: true, currentWindow: true }, function (tabs) {
             data[tabs[0].id] = request.data;
-            chrome.pageAction.show(tabs[0].id);
+            extObject.pageAction.show(tabs[0].id);
         });
     }
-});
+}
+
+if (chrome.runtime) {
+    chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+        sendMessage(chrome, request);
+    });
+}
+else if (browser.runtime) {
+    browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+        sendMessage(browser, request);
+    });
+}
