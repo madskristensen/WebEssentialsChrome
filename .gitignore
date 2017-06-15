@@ -1,2 +1,4 @@
 .vs
-*.zip
+temp
+node_modules
+dist

@@ -12,7 +12,7 @@
   },
 
   "background": {
-    "page": "background.html",
+    "page": "background/background.html",
     "persistent": true
   },
 
@@ -32,7 +32,7 @@
       "32": "img/vs32.png"
     },
     "default_title": "Web Essentials",
-    "default_popup": "popup.htm"
+    "default_popup": "popup/popup.htm"
   },
 
   "web_accessible_resources": [

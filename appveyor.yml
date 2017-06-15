@@ -1,8 +1,13 @@
-version: 1.0.{build}
+image: Visual Studio 2017
 
 build_script:
-- ps: .\build.ps1
+- cd src\app
+- npm install
+- npm run build
 
 artifacts:
-- path: '*.zip'
-  name: Extension
+- path: 'src\dist\*.zip'
+  name: WebExtension
+
+- path: 'src\dist\*.appx'
+  name: EdgeExtension
