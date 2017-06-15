@@ -15,7 +15,6 @@ gulp.task("clean", function (cb) {
     rimraf("temp", cb);
 });
 
-
 // Package
 gulp.task("webextension:package", function (cb) {
     return gulp.src("app/**/*")
