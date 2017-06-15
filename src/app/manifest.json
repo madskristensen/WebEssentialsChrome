@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Web Essentials",
-  "description": "Interacts with Visual Studio's Browser Link feature",
+  "description": "Interacts with Visual Studio extensions supporting Browser Link",
   "author": "Mads Kristensen",
   "version": "1.1",
 
