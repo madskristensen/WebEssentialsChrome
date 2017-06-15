@@ -25,3 +25,5 @@ Exposes Browser Link functionality directly from the Google Chrome toolbar or Fi
 
 ## Developer notes
 Enable Chrome's extension developer mode and add the `src` path as a new extension. Then load the `test/testpage.html` in the browser.
+
+Use this [test page](https://cdn.rawgit.com/madskristensen/WebEssentialsChrome/39e0422e/test/testpage.html) to simulate Visual Studio running with an active Browser Link connection.
