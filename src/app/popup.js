@@ -28,7 +28,7 @@ function showList(extensions) {
 
             let li = document.createElement("li");
             let a = document.createElement("a");
-            a.innerHTML = item;
+            a.innerText = item;
             a.href = "#";
             a["data-callback"] = items[item];
             a.onclick = function () { execute(extensions[i].name, this["data-callback"]); };
@@ -44,7 +44,7 @@ function getHeader(items, list) {
     var header = list.querySelector("h2[data-name='" + items.displayText + "']");
     if (!header) {
         header = document.createElement("h2");
-        header.innerHTML = items.displayText;
+        header.innerText = items.displayText;
         header.className = "header";
         header.setAttribute("data-name", items.displayText);
         list.appendChild(header);
