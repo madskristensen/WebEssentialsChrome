@@ -1,8 +1,10 @@
 {
+  "$schema": "http://json.schemastore.org/webextension",
   "manifest_version": 2,
   "name": "Web Essentials",
   "description": "Interacts with Visual Studio extensions supporting Browser Link",
   "author": "Mads Kristensen",
+  "homepage_url": "https://github.com/madskristensen/WebEssentialsChrome",
   "version": "1.2",
 
   "icons": {
