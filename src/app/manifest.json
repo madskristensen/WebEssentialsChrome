@@ -1,6 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/webextension",
   "manifest_version": 2,
+
   "name": "Web Essentials",
   "description": "Interacts with Visual Studio extensions supporting Browser Link",
   "author": "Mads Kristensen",
@@ -14,7 +15,7 @@
   },
 
   "background": {
-    "page": "background/background.html",
+    "scripts": [ "background/background.js" ],
     "persistent": true
   },
 
