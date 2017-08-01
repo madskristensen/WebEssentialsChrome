@@ -1,6 +1,7 @@
 /// <binding BeforeBuild='build' Clean='clean' />
 
 var gulp = require("gulp"),
+    bom = require("gulp-bom"),
     rename = require("gulp-rename"),
     shell = require("gulp-shell"),
     zip = require("gulp-zip"),
@@ -9,10 +10,14 @@ var gulp = require("gulp"),
 var manifest = JSON.parse(require("fs").readFileSync('./app/manifest.json'));
 
 gulp.task("build", ["edge"]);
-gulp.task("package", ["webextension:package", "edge:package"]);
+gulp.task("package", ["clean:dist", "webextension:package", "edge:package"]);
 
 gulp.task("clean", function (cb) {
     rimraf("temp", cb);
+});
+
+gulp.task("clean:dist", function (cb) {
+    rimraf("dist", cb);
 });
 
 // Package
@@ -33,7 +38,7 @@ gulp.task("edge:copyappx", function (cb) {
 });
 
 //Edge
-gulp.task("edge", ["edge:copyfiles", "edge:copytodist"]);
+gulp.task("edge", ["edge:copyfiles", "edge:copytodist", "edge:bomdist"]);
 
 gulp.task("edge:copyfiles", function (cb) {
     return gulp.src("edge/**/*")
@@ -43,4 +48,11 @@ gulp.task("edge:copyfiles", function (cb) {
 gulp.task("edge:copytodist", function (cb) {
     return gulp.src("app/**/*")
         .pipe(gulp.dest("temp/edgeextension/manifest/Extension"));
+});
+
+gulp.task("edge:bomdist", function (cb) {
+    var ext = "temp/edgeextension/manifest/Extension";
+    return gulp.src([ext + "*.css", ext + "*.js", ext + "*.html"])
+        .pipe(bom())
+        .pipe(gulp.dest("temp/edgeextension/manifest/Extension/"));
 });
