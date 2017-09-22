@@ -5,6 +5,7 @@
 ## Download and install 
 - [Google Chrome](https://chrome.google.com/webstore/detail/web-essentials/mghdcdlpcdiodelbplncnodiiadljhhk)
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/webessentials/)
+- [Opera](https://addons.opera.com/en/extensions/details/web-essentials/)
 
 Exposes Browser Link functionality directly from the Google Chrome toolbar or Firefox address bar.
 
